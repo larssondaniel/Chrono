@@ -1,0 +1,22 @@
+{
+  "name": "Chrono",
+  "version": "0.1.0",
+  "summary": "A short description of Chrono.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/larssondaniel/Chrono",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "larssondaniel": "daniel.larsson@ctk.se"
+  },
+  "source": {
+    "git": "https://github.com/larssondaniel/Chrono.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Chrono/Classes/**/*"
+}

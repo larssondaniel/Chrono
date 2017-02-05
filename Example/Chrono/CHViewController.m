@@ -7,6 +7,7 @@
 //
 
 #import "CHViewController.h"
+#import <Chrono/Chrono.h>
 
 @interface CHViewController ()
 
@@ -17,13 +18,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    [self performHeavyCalculations];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)performHeavyCalculations
+{
+    [Chrono start:@"myHeavyTask"];
+
+    for (NSInteger i = 0; i < 50000; i++)
+    {
+        // Do work
+    }
+
+    [Chrono addEvent:@"finishedFirstPart" forOperation:@"myHeavyTask"];
+
+    for (NSInteger i = 0; i < 10000; i++)
+    {
+        // Do work
+    }
+
+    [Chrono stop:@"myHeavyTask"];
 }
 
 @end
